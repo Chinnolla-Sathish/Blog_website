@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<%if(locals.message){%>
+  <h2>Message Posted Sucessfully</h2>
+<%} else {%>
+  <h2>Create Post</h2>
+  <form class="" action="/createPost" method="POST">
+    <div class="">
+      <textarea class ="textarea" name="message" rows="8" cols="80" required></textarea>
+    </div>
+    <div class="button">
+      <input type="submit" name="" value="POST">
+    </div>
+
+  </form>
+<%}%>
+<%- include("partials/footer.ejs") %>

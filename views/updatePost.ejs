@@ -1,0 +1,17 @@
+<%-include("partials/header.ejs") %>
+<%if(locals.count){%>
+  <h2>Post Updated Successfully</h2>
+<%}else{%>
+  <div class="">
+    <form class="" action="/updatePost" method="POST">
+      <h2>Update Post</h2>
+      <div class="">
+        <textarea name="update_message" rows="8" cols="80"><%=message%></textarea>
+      </div>
+      <div class="button">
+        <input type="submit" name="" value="Update Post">
+      </div>
+    </form>
+  </div>
+<%}%>
+<%- include("partials/footer.ejs") %>
